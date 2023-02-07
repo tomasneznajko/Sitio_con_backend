@@ -1,0 +1,97 @@
+.contenedorPrincipal{
+    background-color: black;
+}
+
+.fotos{
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 5%;
+    column-gap: 5%;
+    text-align: center;
+}
+
+button{
+    background: linear-gradient(rgb(6, 162, 6),black);
+    border: 1px solid white;
+    border-radius: 15%;
+    height: 3vw;
+    width: 10vw;
+    font-size: x-large;
+}
+
+button:hover{
+    opacity: 80%;
+}
+
+.fotos img{
+    border: solid 4px gold;
+}
+
+.jugadores > div{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 2%;
+    padding: 5%;
+}
+
+.titulo{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.texto{
+    text-align: justify;
+}
+
+.enLinea{
+    display:inline-flex;
+}
+
+@media only screen and (max-width: 900px) {
+    /* Tablet: */
+    .fotos{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        padding: 10%;
+        column-gap: 10%;
+        row-gap: 5%;
+    }
+
+    button{
+        height: 6vh;
+        width: 20vw;
+    }
+
+    .jugadores > div{
+        display: flex;
+        flex-direction: column;
+        justify-content:center ;
+    }
+
+    .jugadores img{
+        padding: 10%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    /* Movil */
+    .fotos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 50px;
+
+    }
+    .fotos img{
+        padding: 5%;
+        border: 0;
+    }
+
+    button{
+        height: 6vh;
+        width: 30vw;
+    }
+}

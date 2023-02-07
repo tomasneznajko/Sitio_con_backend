@@ -1,0 +1,128 @@
+*{
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+    box-sizing: border-box;
+}
+
+
+header{
+    display: flex;
+    padding: 1%;
+    height: 20vh;
+    column-gap: 15vmax;
+    border: solid 1px white;
+    border-bottom: 0;
+}
+
+header div{
+    flex-grow: 1;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+    font-size: x-large;
+}
+
+header img{
+    height: 100%;
+    width: auto;
+    object-fit:cover;
+}
+
+header:nth-child(odd){
+   animation-duration: 4s; 
+}
+
+@keyframes aparicion{
+    0% {opacity: 0%;}
+    50% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+@keyframes cambioColor{
+    0% {background-color:white};
+    100% {background-color: black;}
+}
+
+.escudo{
+    animation: aparicion 2s linear;
+}
+
+header,nav{
+    background-color: black;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    /* position: fixed; */
+}
+
+nav div{
+    border: 1px solid white;
+    flex-grow: 1;
+    text-align: center;
+    font-size: large;
+}
+
+nav a{
+    text-decoration: none;
+    color: rgb(32, 141, 32);
+}
+
+nav div:hover{
+    background: linear-gradient(rgb(6, 162, 6),black);
+}
+
+nav a:hover{
+    color: white;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.contenedorPrincipal{
+    animation: aparicion 2s linear;
+    margin: 0 10%;
+    background-color: black;
+}
+
+
+footer{
+    background: linear-gradient(rgb(6, 162, 6),black);
+    text-align: center;
+    animation-duration: 2s;
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 1vw;
+    padding: 1vw;
+}
+
+@media only screen and (max-width: 900px) {
+    header{
+        padding: 3%;
+    }
+    header div{
+        font-size: large;
+    }
+    nav{
+      flex-direction: column ;
+      height: auto;
+    }
+
+    nav div{
+        padding: 2%;
+    }
+
+    .contenedorPrincipal{
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    header div{
+        font-size: medium;
+    }
+}

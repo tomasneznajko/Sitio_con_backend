@@ -1,0 +1,71 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    <header>
+        <img src="Imagenes/loguito tomito .png" alt="Escudo">
+    </header>
+    <h2>Nuevo/a socio/a</h2>
+    <form action="/store" method="post" enctype="multipart/form-data"> <!-- enctype permite enviar los archivos -->
+        <div class="contenedorPrincipal">
+            <div>
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" name="nombre" required>
+                <span id="errorNombre"> </span>         
+            </div>
+            <div>
+                <label for="apellido">Apellido: </label>
+                <input type="text" id="apellido" name="apellido" required>
+                <span id="errorApellido"> </span>
+            </div>
+            <div>
+                <label for="fecha">Fecha de nacimiento: </label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div>
+                <label for="sexo">Sexo: </label>
+                <select name="sexo" id="sexo">
+                    <option value="1">Masculino</option>
+                    <option value="2">Femenino</option>
+                    <option value="3">Otro</option>
+                </select>
+            </div>
+            <div class="enLinea">
+                <label for="doc">Documento: </label>
+                <div>
+                    <select name="doc" id="doc">
+                        <option value="1">DNI</option>
+                        <option value="2">PASAPORTE</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="text" id="identificacion" name="identificacion">
+                    <span id="errorIdentificacion"> </span>
+                </div>
+            </div>
+            <div>
+                <label for="telefono">Telefono: </label>
+                <input type="text" id="telefono" name="telefono">
+                <span id="errorTelefono"> </span>
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email">
+                <span id="errorEmail"> </span>            
+            </div>
+            <div>
+                <label for="foto">Foto: </label>
+                <input type="file" id="foto" name="foto">
+            </div>
+            <div class="enviar">
+                <input type="submit" value="Enviar" id="boton">
+            </div>
+        </div>
+
+    </form>
+    <div>
+        <a href="/">Cancelar</a>
+    </div>
+    <script src="javaScript/formulario.js"></script>
+
+{% endblock %}

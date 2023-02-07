@@ -1,0 +1,41 @@
+
+.contenedorPrincipal{
+    color: black;
+    display: grid;
+    grid-template-rows: 3;
+    background-color: black;
+}
+
+.contenedorPrincipal > div{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 2%;
+    padding: 5%;
+}
+
+.titulo{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.texto{
+    text-align: justify;
+}
+
+
+@media only screen and (max-width: 900px) {
+    /* Tablet: */
+    .contenedorPrincipal > div{
+        display: flex;
+        flex-direction: column;
+        justify-content:center ;
+    }
+
+    .contenedorPrincipal img{
+        padding: 5%;
+    }
+}
+
+

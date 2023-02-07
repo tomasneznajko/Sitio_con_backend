@@ -1,0 +1,85 @@
+*{
+    font-family:'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+header{
+    padding: 1%;
+    height: 15vh;
+    column-gap: 15vmax;
+    border: solid 1px white;
+    border-bottom: 0;
+    background-color: black;
+    text-align: center;
+}
+
+img{
+    width: auto;
+    height: 100%;
+}
+
+.contenedorPrincipal,h2{
+    margin: 0 10%;
+}
+
+.contenedorPrincipal{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4;
+}
+
+.contenedorPrincipal > div{
+    padding: 3%;
+}
+
+.enLinea{
+    display: flex;
+    flex-flow: row nowrap;
+    column-gap: 1%;
+}
+
+
+.enviar{
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.enviar input{
+    background: linear-gradient(rgb(6, 162, 6),white);
+    border: 3px solid black;
+    border-radius: 15%;
+    height: 4vw;
+    width: 15vw;
+    font-size: x-large;
+}
+
+.enviar input:hover{
+    opacity: 80%;
+}
+
+span{
+    color: red;
+}
+
+@media only screen and (max-width: 900px) {
+    /* Tablet: */
+    .contenedorPrincipal{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .enviar input{
+        height: 6vw;
+        width: 20vw;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .enviar input{
+        height: 8vw;
+        width: 25vw;
+    }
+}
+

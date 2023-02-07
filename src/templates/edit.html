@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <header>
+        <img src="Imagenes/loguito tomito .png" alt="Escudo">
+    </header>
+    <h2>Editar socio/a</h2>
+    <form action="/update" method="post" enctype="multipart/form-data"> <!-- enctype permite enviar los archivos -->
+        <input type="hidden" name="id" value="{{ usuario['id_usuario'] }}">
+        <div class="contenedorPrincipal">
+            <div>
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" name="nombre" value="{{ usuario['nombre'] }}" required>
+                <span id="errorNombre"> </span>         
+            </div>
+            <div>
+                <label for="apellido">Apellido: </label>
+                <input type="text" id="apellido" name="apellido"  value="{{ usuario['apellido'] }}" required>
+                <span id="errorApellido"> </span>
+            </div>
+            <div>
+                <label for="fecha">Fecha de nacimiento: </label>
+                <input type="date" id="fecha" name="fecha" value="{{ usuario['fecha'] }}" required>
+            </div>
+            <div>
+                <label for="sexo">Sexo: </label>
+                <select name="sexo" id="sexo" value="{{ usuario['sexo'] }}">
+                    <option value="1">Masculino</option>
+                    <option value="2">Femenino</option>
+                    <option value="3">Otro</option>
+                </select>
+            </div>
+            <div class="enLinea">
+                <label for="doc">Documento: </label>
+                <div>
+                    <select name="doc" id="doc" value="{{ usuario['tipo_doc'] }}">
+                        <option value="1">DNI</option>
+                        <option value="2">PASAPORTE</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="text" id="identificacion" name="identificacion" value="{{ usuario['num_doc'] }}">
+                    <span id="errorIdentificacion"> </span>
+                </div>
+            </div>
+            <div>
+                <label for="telefono">Telefono: </label>
+                <input type="text" id="telefono" name="telefono" value="{{ usuario['telefono'] }}">
+                <span id="errorTelefono"> </span>
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" value="{{ usuario['email'] }}">
+                <span id="errorEmail"> </span>            
+            </div>
+            <div>
+                <label for="foto">Foto: </label>
+                <input type="file" id="foto" name="foto" value="{{ usuario['foto'] }}">
+                <img width="100" src="{{ url_for('uploads', imagen = usuario['foto']) }}" alt="{{ usuario['apellido'] }}">
+            </div>
+            <div class="enviar">
+                <input type="submit" value="Enviar" id="boton">
+            </div>
+        </div>
+
+    </form>
+
+    <div>
+        <a href="/">Cancelar</a>
+    </div>
+    <script src="javaScript/formulario.js"></script>
+    
+{% endblock %}
