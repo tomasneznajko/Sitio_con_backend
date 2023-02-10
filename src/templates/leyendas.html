@@ -1,45 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tecno FC</title>
-    <link rel="icon" href="Imagenes/loguito-tomito-.ico" sizes="32x32" />
-    <script src="https://kit.fontawesome.com/ce7c5da9af.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="CSS/bases.css">
-    <link rel="stylesheet" href="CSS/leyendas.css">
-</head>
-<body>
-    <header> 
-        <div>
-            <h1 class="animate__animated animate__fadeInLeft">Tecno FC</h1> 
-        </div>
-        <div>
-            <img src="Imagenes/loguito tomito .png" alt="Escudo del club" class="escudo">
-        </div>
-        <div>
-            <img src="Imagenes/Daco_4927151.png" alt="Logo de EA" class="animate__animated animate__fadeInRight">
-        </div>
-    </header>
-    <nav>
-      <div>
-          <a href="index.html" class="navegador">Inicio</a>
-      </div>
-      <div>
-          <a href="origenes.html" class="navegador">Origenes</a>
-      </div>
-      <div>
-          <a href="estadisticas.html" class="navegador">Estadísticas</a>
-      </div>
-      <div>
-          <a href="leyendas.html" class="navegador">Leyendas</a>
-      </div>
-      <div>
-          <a href="momentazos.html" class="navegador">Momentazos</a>
-      </div>
-  </nav>
+{% extends 'layout.html' %}
+
+{% block css %} {{url_for('static', filename = 'CSS/leyendas.css' )}} {% endblock %}
+
+{% block content %}
   <div class="contenedorPrincipal">
     <div class="fotos">
         <div>
@@ -128,19 +91,4 @@
         </div>
     </div>
   </div>
-  <footer class="animate__animated animate__fadeInUpBig">
-    <div>
-      Sitio oficial de TFC
-    </div>
-    <div>
-      <a href="https://open.spotify.com/playlist/2a6OSlFchVcDonrXMMJ6EM"><i class="fa-brands fa-spotify"></i></a>
-      <a href="http://wa.me/5491149499974/?text=Hola, buenas tardes"><i class="fa-brands fa-whatsapp"></i></a>
-      <a href="https://www.instagram.com/?hl=es-la"><i class="fa-brands fa-instagram"></i></a>
-      <a href="www.linkedin.com/in/tomas-neznajko-"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="https://www.facebook.com/profile.php?id=100009060143640"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="mailto:tomas.neznajko@gmail.com?subject=Consulta de Tecno FC"><i class="fa-solid fa-envelope"></i></a>
-    </div>
-  </footer>
-  <script src="javaScript/script.js"></script>
-</body>
-</html>
+{% endblock %}

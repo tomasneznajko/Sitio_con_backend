@@ -1,34 +1,8 @@
 {% extends 'layout.html' %}
 
+{% block css %} {{url_for('static', filename = 'CSS/index.css' )}} {% endblock %}
+
 {% block content %}
-    <header> 
-            <div>
-                <h1 class="animate__animated animate__fadeInLeft">Tecno FC</h1> <!--cartel con entrada animada -->
-            </div>
-            <div>
-                <img src="Imagenes/loguito tomito .png" alt="Escudo del club" class="escudo">
-            </div>
-            <div>
-                <img src="Imagenes/Daco_4927151.png" alt="Logo de EA" class="animate__animated animate__fadeInRight">
-            </div>
-    </header>
-    <nav>
-      <div>
-          <a href="index.html" class="navegador">Inicio</a>
-      </div>
-      <div>
-          <a href="/origenes" class="navegador">Origenes</a>
-      </div>
-      <div>
-          <a href="/estadisticas" class="navegador">Estadísticas</a>
-      </div>
-      <div>
-          <a href="/leyendas" class="navegador">Leyendas</a>
-      </div>
-      <div>
-          <a href="/momentazos" class="navegador">Momentazos</a>
-      </div>
-  </nav>
   <div class="contenedorPrincipal">
       <div class="registro">
         <div>
@@ -49,10 +23,10 @@
         </div>  
       </div>
       <div>
-          <img src="Imagenes/WhatsApp Image 2022-04-11 at 10.57.36 PM.jpeg" alt="Jugador de fondo">
+          <img src="{{url_for('static', filename = 'Imagenes/index.jpeg')}}" alt="Jugador de fondo">
       </div>
   </div>
-  <table>
+  <!-- <table>
     <thead>
         <tr>
             <th>Nombre</th>
@@ -93,21 +67,8 @@
         </tr>
         {% endfor %}
     </tbody>
-</table>
+</table> -->
 
-  <footer class="animate__animated animate__fadeInUpBig">
-    <div>
-      Sitio oficial de TFC
-    </div>
-    <div>
-      <a href="https://open.spotify.com/playlist/2a6OSlFchVcDonrXMMJ6EM" target="_blank"><i class="fa-brands fa-spotify"></i></a>
-      <a href="http://wa.me/5491149499974/?text=Hola, buenas tardes" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-      <a href="https://www.instagram.com/?hl=es-la" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-      <a href="www.linkedin.com/in/tomas-neznajko-" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="https://www.facebook.com/profile.php?id=100009060143640" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="mailto:tomas.neznajko@gmail.com?subject=Consulta de Tecno FC" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-    </div>
-  </footer>
-  <script src="javaScript/formulario.js"></script>
+    
 
 {% endblock %}

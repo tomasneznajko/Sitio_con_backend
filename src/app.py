@@ -62,12 +62,31 @@ def create(): #Nombre de funcion suele coincidir con el conectado con route desd
 # DELETE: Avisar que se va a borrar registro
 # Usados con API o servicios
 
-def conectarPagina(nombre):
-    @app.route('/' + nombre)
-    def funcion():
-        return render_template(nombre + '.html')
+#Conexion con las vistas:
+@app.route('/origenes')
+def origenes():
+    return render_template('origenes.html')
 
-conectarPagina('origenes')
+@app.route('/estadisticas')
+def estadisticas():
+    return render_template('estadisticas.html')
+
+@app.route('/leyendas')
+def leyendas():
+    return render_template('leyendas.html')
+
+@app.route('/momentazos')
+def momentazos():
+    return render_template('momentazos.html')
+
+
+
+# def conectarPagina(nombre):
+#     @app.route('/' + nombre)
+#     def funcion():
+#         return render_template(nombre + '.html')
+
+# conectarPagina('origenes')
 
 # conectarPagina('leyendas')
 # conectarPagina('momentazos')
