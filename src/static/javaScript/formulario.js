@@ -1,7 +1,7 @@
 //Validaciones
 
 function validarCadena(cadena){
-    return cadena.value.length > 3;
+    return cadena.value.length > 3 && typeof(cadena) == 'string';
 }
 
 function validarIdentificacion(identificacion){
@@ -41,12 +41,12 @@ form.addEventListener('submit',(event) => {
     var error = false;
     if(!validarCadena(nombre)){
         let span = document.querySelector("#errorNombre");
-        span.textContent = "Colocar 3 o más caracteres";
+        span.textContent = "Colocar 3 o más caracteres de texto";
         error = true;
     }
     if(!validarCadena(apellido)){
         let span = document.querySelector("#errorApellido")
-        span.textContent = "Colocar 3 o más caracteres";
+        span.textContent = "Colocar 3 o más caracteres de texto";
         error = true;
     }
     if (!validarIdentificacion(identificacion)){
@@ -66,8 +66,8 @@ form.addEventListener('submit',(event) => {
     }
     if(!error){
         form.submit()
-        window.location.replace("index.html");
-        // const registro = document.querySelector(".registro");
-        // registro.innerHTML = "<div><h2>Bienvenido</h2></div>";      //No entiende el evento la página index   
+        window.location.replace("/");
+        const registro = document.querySelector(".registro");
+        registro.innerHTML = "<div><h2>Bienvenido</h2></div>";      //No entiende el evento la página index   
     }
 })

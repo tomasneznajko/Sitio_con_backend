@@ -12,7 +12,8 @@
 }
 
 button:hover{
-    opacity: 80%;
+    cursor: pointer;
+    opacity: 50%;
 }
 
 button{

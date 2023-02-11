@@ -1,16 +1,17 @@
 *{
     font-family:'Times New Roman', Times, serif;
     box-sizing: border-box;
+    color: black;
 }
 
 header{
     padding: 1%;
     height: 15vh;
     column-gap: 15vmax;
-    border: solid 1px white;
     border-bottom: 0;
     background-color: black;
-    text-align: center;
+    margin: auto;
+    justify-content: center;
 }
 
 img{
@@ -20,9 +21,11 @@ img{
 
 .contenedorPrincipal,h2{
     margin: 0 10%;
+    color: black;
 }
 
 .contenedorPrincipal{
+    color: black;
     background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -31,6 +34,8 @@ img{
 
 .contenedorPrincipal > div{
     padding: 3%;
+
+    color: black;
 }
 
 .enLinea{
@@ -47,12 +52,13 @@ img{
 }
 
 .enviar input{
-    background: linear-gradient(rgb(6, 162, 6),white);
+    background: linear-gradient(rgb(6, 162, 6),black);
     border: 3px solid black;
     border-radius: 15%;
     height: 4vw;
     width: 15vw;
     font-size: x-large;
+    color: white;
 }
 
 .enviar input:hover{

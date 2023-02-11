@@ -26,6 +26,9 @@
           <img src="{{url_for('static', filename = 'Imagenes/index.jpeg')}}" alt="Jugador de fondo">
       </div>
   </div>
+
+
+
   <!-- <table>
     <thead>
         <tr>
@@ -69,6 +72,6 @@
     </tbody>
 </table> -->
 
-    
-
 {% endblock %}
+
+{% block js %} {{url_for('static', filename = 'javaScript/formulario.js' )}} {% endblock %}

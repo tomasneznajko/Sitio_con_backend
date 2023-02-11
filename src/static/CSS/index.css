@@ -28,6 +28,7 @@
     opacity: 80%;
 }
 
+
 @media only screen and (max-width: 900px) {
     .contenedorPrincipal{
         display: flex;
